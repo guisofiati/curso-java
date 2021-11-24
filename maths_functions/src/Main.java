@@ -38,5 +38,21 @@ public class Main {
 		
 		System.out.println("O valor absoluto de " + y + " é igual a " + A);
 		System.out.println("O valor absoluto de " + z + " é igual a " + B);
+		System.out.println("*********************************************");
+		System.out.println();
+		
+		double a = 3.0;
+		double b = 4.0;
+		double c = 12.0;
+		double x1, x2, delta;
+		
+		delta = Math.pow(b, 2.0) - 4*a*c;
+		
+		x1 = (-b + Math.sqrt(delta)) / (2.0 * a);
+		x2 = (-b - Math.sqrt(delta)) / (2.0 * a);
+		
+		System.out.println(x1);
+		System.out.println(x2);
+		
 	}
 }
