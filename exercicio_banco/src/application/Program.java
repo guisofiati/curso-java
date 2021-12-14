@@ -12,22 +12,23 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		Account account;
+		
 		System.out.print("Enter account number: ");
 		int number = sc.nextInt();
 		System.out.print("Enter account holder: ");
 		sc.nextLine();
 		String holder = sc.nextLine();
 		
-		Account account = new Account(number, holder);
-		
 		System.out.print("Is there an initial deposit? (Y/N): ");
 		char resp = sc.next().charAt(0);
 		if (resp == 'y') {
+			System.out.println();
 			System.out.print("Enter initial deposit value: ");
-			double amount = sc.nextDouble();
-			account.setBalance(account.getBalance() + amount);
+			double initialDeposit = sc.nextDouble();
+			account = new Account(number, holder, initialDeposit);
 		} else {
-			System.out.println("Initial deposit refused.");
+			account = new Account(number, holder);
 		}
 		
 		System.out.println();
