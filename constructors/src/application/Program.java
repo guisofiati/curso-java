@@ -23,6 +23,11 @@ public class Program {
 		
 		System.out.println("Product data: " + product);
 		
+		product.setName("TV Ultra");
+		product.setPrice(1200.00);
+		System.out.println("Updated name: " + product.getName());
+		System.out.println("Updated price: " + product.getPrice());
+		
 		System.out.println();
 		System.out.print("Enter the number of products to be added in stock: ");
 		int quantity = sc.nextInt();
@@ -35,6 +40,7 @@ public class Program {
 		System.out.print("Enter the number of products to be removed from stock: ");
 		quantity = sc.nextInt();
 		product.removeProducts(quantity);
+		System.out.println("Updated quantity: " + product.getQuantity());
 		
 		System.out.println();
 		System.out.println("Updated data: " + product);
