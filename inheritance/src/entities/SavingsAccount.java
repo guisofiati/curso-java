@@ -1,6 +1,7 @@
 package entities;
 
-public class SavingsAccount extends Account{
+//Com isso, a classe SavingsAccountPlus vai dar erro, pois essa classe está com o final
+public final class SavingsAccount extends Account{
 	
 	private Double interestRate;
 	
@@ -15,8 +16,9 @@ public class SavingsAccount extends Account{
 	
 	//Sobrepos o método da classe Account
 	//Se errar o nome do método com o Override, da um erro falando que não existe na superclass
+	//Anotada com o final esse método não podera mais ser sobreposto
 	@Override
-	public void withdraw(double amount) {
+	public final void withdraw(double amount) {
 		balance -= amount;
 	}
 	
