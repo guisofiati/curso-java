@@ -13,6 +13,13 @@ public class SavingsAccount extends Account{
 		this.interestRate = interestRate;
 	}
 	
+	//Sobrepos o método da classe Account
+	//Se errar o nome do método com o Override, da um erro falando que não existe na superclass
+	@Override
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
+	
 	public void updateBalance() {
 		balance += balance * interestRate;
 	}
