@@ -62,5 +62,19 @@ public class Program {
 		Account acc10 = new BusinessAccount(102, "Alex", 1000.0, 500.0);
 		acc10.withdraw(200.0);
 		System.out.println(acc10.getBalance());
+		
+		System.out.println("*************************************");
+		System.out.println();
+		
+		Account x = new Account(111, "Fulano", 1000.0);
+		Account y = new SavingsAccount(112, "Ciclano", 1000.0, 0.01);
+		
+		// Tipos iguais (Account) mas comportamentos (métodos) diferentes, será descontado 55 de um e apenas 50 de outro
+		// Polimorfismo é a capacidade da classe pai de termos comportamentos diferentes para métodos das classes filhas
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
 	}
 }
